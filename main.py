@@ -16,6 +16,7 @@ MODELS = {
 
 app = FastAPI(title="Plant Disease Classification API")
 
+
 def classify_image(image_file, plant_type: str):
     """
     Send image to Roboflow classification API based on plant type.
@@ -46,13 +47,14 @@ def classify_image(image_file, plant_type: str):
     else:
         return {"plant": plant_type, "disease": "None", "confidence": 0}
 
+
 @app.post("/classify")
 async def classify(
     plant_type: str = Form(...), 
     file: UploadFile = File(...)
 ):
     """
-    Upload an image + specify plant_type (rice/cassava/sugarcane/tea).
+    Upload an image + specify plant_type (rice/cassava/sugarcane/tea/mango).
     """
     try:
         image_bytes = await file.read()
@@ -60,3 +62,11 @@ async def classify(
         return JSONResponse(content=result)
     except Exception as e:
         return JSONResponse(content={"error": str(e)})
+
+
+@app.get("/health")
+async def health_check():
+    """
+    Health check endpoint.
+    """
+    return {"status": "ok", "message": "Plant Disease Classification API is running"}
