@@ -9,7 +9,7 @@ from typing import Dict
 from starlette.responses import FileResponse
 
 # ------------------- CONFIG -------------------
-API_KEY = os.getenv("ROBOFLOW_API_KEY", "YOUR_API_KEY")  # put API key in Render
+API_KEY = os.getenv("ROBOFLOW_API_KEY", "NVfp8h9atJEAWzsw1eZ0")  # put API key in Render
 
 # Roboflow client
 CLIENT = InferenceHTTPClient(
