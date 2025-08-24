@@ -10,7 +10,8 @@ MODELS = {
     "rice": "rice-plant-leaf-disease-classification/1",
     "cassava": "cassava-leaf-disease-classification/1",
     "sugarcane": "sugarcane-leaf-disease-classification/1",
-    "tea": "tea-leaf-disease-classification/1"
+    "tea": "tea-leaf-disease-classification/1",
+    "mango": "mango-leaf-disease-2/4"
 }
 
 app = FastAPI(title="Plant Disease Classification API")
