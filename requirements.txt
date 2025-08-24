@@ -1,5 +1,5 @@
 fastapi
 uvicorn
-inference-sdk
 python-multipart
 opencv-python-headless
+requests
