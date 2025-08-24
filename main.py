@@ -8,7 +8,7 @@ API_KEY = "NVfp8h9atJEAWzsw1eZ0"   # replace with your Roboflow API key
 # Dictionary of plant -> Roboflow model IDs
 MODELS = {
     "rice": "rice-plant-leaf-disease-classification/1",
-    "cassava": "cassava-model/1",
+    "cassava": "identificacao-doencas-mandioca/1",
     "sugarcane": "sugarcane-leaf-disease/2",
     "tea": "tea-leaf-plant-diseases/1",
     "mango": "mango-leaf-disease-2/4"
